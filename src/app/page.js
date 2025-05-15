@@ -9,7 +9,7 @@ export default function Home() {
         }}
       >
         <h1 className="text-6xl font-bold text-yellow-500 mb-6 animate__animated animate__fadeIn animate__delay-1s">
-          Fama Barber Shop & Beauty Salon
+          Fama Barber Shop &amp; Beauty Salon
         </h1>
         <p className="text-xl mb-6 animate__animated animate__fadeIn animate__delay-2s">
           Style That Turns Heads – Denton, TX
@@ -116,7 +116,7 @@ export default function Home() {
             { quote: "I love their attention to detail and the way they style my hair. Worth every penny!", author: "Mark T." }
           ].map((review, i) => (
             <div key={i} className="w-80 bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-transform transform hover:scale-105">
-              <p className="text-gray-300">"{review.quote}"</p>
+              <p className="text-gray-300">&quot;{review.quote}&quot;</p>
               <p className="mt-4 font-semibold text-yellow-500">– {review.author}</p>
             </div>
           ))}
