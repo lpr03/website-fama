@@ -2,20 +2,29 @@ export default function Home() {
   return (
     <main className="bg-black text-white font-sans">
       {/* Hero Section */}
-      <section className="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center px-6"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1520336811552-42878b67d25f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
+      <section
+        className="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center px-6"
+        style={{
+          backgroundImage: "url('/images/background.avif')",
+        }}
+      >
         <h1 className="text-6xl font-bold text-yellow-500 mb-6 animate__animated animate__fadeIn animate__delay-1s">
           Fama Barber Shop & Beauty Salon
         </h1>
-        <p className="text-xl mb-6 animate__animated animate__fadeIn animate__delay-2s">Style That Turns Heads – Denton, TX</p>
-        <a href="tel:+19406129127" className="bg-yellow-500 text-black px-8 py-4 rounded-full text-xl hover:bg-yellow-400 transition-transform transform hover:scale-105">
+        <p className="text-xl mb-6 animate__animated animate__fadeIn animate__delay-2s">
+          Style That Turns Heads – Denton, TX
+        </p>
+        <a
+          href="tel:+19406129127"
+          className="bg-yellow-500 text-black px-8 py-4 rounded-full text-xl hover:bg-yellow-400 transition-transform transform hover:scale-105"
+        >
           Call Now
         </a>
       </section>
 
       {/* Why Choose Us */}
       <section className="py-16 px-6 text-center max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-yellow-400 mb-6 animate__animated animate__fadeIn animate__delay-3s">Why Choose Us</h2>
+        <h2 className="text-3xl font-bold text-yellow-400 mb-6">Why Choose Us</h2>
         <div className="flex flex-wrap justify-center gap-8 text-left">
           {[
             {
@@ -74,17 +83,17 @@ export default function Home() {
             {
               name: 'John Doe',
               specialization: "Men's Haircuts, Beard Styling",
-              image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&auto=format&fit=crop&q=60'
+              image: '/images/john.avif'
             },
             {
               name: 'Jane Smith',
               specialization: "Women's Styling, Hair Color",
-              image: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071&auto=format&fit=crop'
+              image: '/images/jane.avif'
             },
             {
               name: 'Mike Johnson',
               specialization: "Haircuts, Kids Haircuts",
-              image: 'https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=600&auto=format&fit=crop&q=60'
+              image: '/images/mike.avif'
             }
           ].map((barber, i) => (
             <div key={i} className="w-80 bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-transform transform hover:scale-105">
@@ -119,9 +128,9 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">Our Gallery</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            "https://images.unsplash.com/photo-1693591936914-14645081663a?w=600&auto=format&fit=crop&q=60",
-            "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1974&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1675342656322-80aeeb53ae4a?w=600&auto=format&fit=crop&q=60"
+            '/images/gallery1.avif',
+            '/images/gallery2.avif',
+            '/images/gallery3.avif'
           ].map((src, i) => (
             <img key={i} src={src} alt={`Gallery Image ${i + 1}`} className="rounded-xl" />
           ))}
@@ -141,44 +150,35 @@ export default function Home() {
         </form>
       </section>
 
+      {/* Footer */}
       <footer className="bg-black text-white py-12">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-wrap justify-center md:justify-between items-center">
-          {/* Logo and Brand Name */}
-          <div className="text-center md:text-left mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold text-yellow-500">Fama Barber Shop</h3>
-            <p className="text-gray-400 mt-2">Where Style Meets Excellence</p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-wrap justify-center md:justify-between items-center">
+            <div className="text-center md:text-left mb-6 md:mb-0">
+              <h3 className="text-2xl font-bold text-yellow-500">Fama Barber Shop</h3>
+              <p className="text-gray-400 mt-2">Where Style Meets Excellence</p>
+            </div>
+            <div className="flex justify-center gap-8 mb-6 md:mb-0">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 transition-colors">
+                <i className="fab fa-facebook fa-2x"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 transition-colors">
+                <i className="fab fa-instagram fa-2x"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 transition-colors">
+                <i className="fab fa-twitter fa-2x"></i>
+              </a>
+            </div>
+            <div className="text-center md:text-right text-gray-400">
+              <p>Call us at: <a href="tel:+19406129127" className="text-yellow-500">+1 (940) 612-9127</a></p>
+              <p className="mt-2">123 Main St, Denton, TX 76201</p>
+            </div>
           </div>
-
-          {/* Social Media Links */}
-          <div className="flex justify-center gap-8 mb-6 md:mb-0">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 transition-colors">
-              <i className="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 transition-colors">
-              <i className="fab fa-instagram fa-2x"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 transition-colors">
-              <i className="fab fa-twitter fa-2x"></i>
-            </a>
-          </div>
-
-          {/* Contact Info */}
-          <div className="text-center md:text-right text-gray-400">
-            <p>Call us at: <a href="tel:+19406129127" className="text-yellow-500">+1 (940) 612-9127</a></p>
-            <p className="mt-2">123 Main St, Denton, TX 76201</p>
+          <div className="text-center mt-12">
+            <p className="text-gray-400">&copy; {new Date().getFullYear()} Fama Barber Shop. All rights reserved.</p>
           </div>
         </div>
-
-        <div className="text-center mt-12">
-          <p className="text-gray-400">&copy; {new Date().getFullYear()} Fama Barber Shop. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-    
+      </footer>
     </main>
   );
 }
-
-
-
