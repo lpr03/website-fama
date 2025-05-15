@@ -1,4 +1,4 @@
-# Fama Barber Shop & Beauty Salon Landing Page
+# Fama website
 ### Link: https://website-fama.vercel.app/ 
 
 ## Overview
